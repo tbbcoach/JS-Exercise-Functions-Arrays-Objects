@@ -144,14 +144,14 @@ passing { id: 1, name: 'Leia', email: 'leia
 the returned value should look like `Hello, my name is Leia`.
  * 
  */
-function getName(id, name, email) {
+function getName(Obj) {
   /* code here */
 const Obj1 = {
-  id: id,
-  name: name,
-  email: email
+  id: 5,
+  name: 'Leia',
+  email: 'leia@leia.com'
 }
-  return 'Hello, my name is ' + Obj1.name;
+  return 'Hello, my name is '  + Obj.name;
 }
 /**
  * ### Challenge `appleIndex`
@@ -169,7 +169,7 @@ const Obj1 = {
  * the returned value should be: 2.
 */
 function appleIndex(arr) {
- // fruit = ['orange', 'grape', 'apple', 'banana', 'mango']
+ const fruit = ['orange', 'grape', 'apple', 'banana', 'mango']
   //return 
 }
 
