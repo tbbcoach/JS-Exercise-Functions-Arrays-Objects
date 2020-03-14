@@ -56,14 +56,14 @@ function sayGoodbye(name) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(t) {
+function temperatureCtoF(num) {
 
- // const temp = *(9/5)+32;
-    return Math.round(t*(9/5)+32);
+  const temp = (num*(9/5)+32);
+    return Math.round(temp);
 }
 
   
-  //temperatureCtoF(24);
+ // temperatureCtoF(24);
   /* code here */
 /**
  * ### Challenge `temperatureInF`
@@ -83,14 +83,21 @@ function temperatureCtoF(t) {
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
 function temperatureInF(temp, unit) {
-  if (unit ='C') {
+ // let num = temp;
+
+  
+  if (unit =='C') {
     
-    return Math.round(temp*(9/5)+32),unit;
+   let num = (temp*(9/5)+32);
+    
+    return Math.round(num + unit);
   }
       else {
-        return temperatureInF(temp, unit);
+        return temp + unit;
       }
+    
   }
+ // temperatureInF(88,'F');
   /* code here */
 
 
@@ -126,22 +133,26 @@ function makePersonObject(id, name, email) {
 
 /**
  * ### Challenge `getName`
+ * @instructions This function takes as its only argument
+an object containing a `name` property,
+and return a string that reads `Hello, my name is {name}`,
+where `{name}` is the name stored in the object.
+
+For example, if we invoke `getName`
+passing { id: 1, name: 'Leia', email: 'leia
+ * @leia .com` } as the argument,
+the returned value should look like `Hello, my name is Leia`.
  * 
- * @instructions
- * This function takes as its only argument
- * an object containing a `name` property,
- * and return a string that reads `Hello, my name is {name}`,
- * where `{name}` is the name stored in the object.
- * 
- * For example, if we invoke `getName`
- * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
- * the returned value should look like `Hello, my name is Leia`.
-*/
-function getName(/* code here */) {
+ */
+function getName(id, name, email) {
   /* code here */
+const Obj1 = {
+  id: id,
+  name: name,
+  email: email
 }
-
-
+  return 'Hello, my name is ' + Obj1.name;
+}
 /**
  * ### Challenge `appleIndex`
  * 
